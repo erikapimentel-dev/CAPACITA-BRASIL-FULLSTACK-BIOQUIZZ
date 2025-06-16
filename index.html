@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioQuiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="tela-inicial" class="tela">
+            <h1>BioQuiz</h1>
+            <p>Insira seu nome para começar!</p>
+            <input type="text" id="input-nome" placeholder="Digite seu nome">
+            <button id="botao-comecar" class="botao">Começar</button>
+        </div>
+
+        <div id="tela-regras" class="tela escondido">
+            <h2 id="mensagem-boas-vindas"></h2>
+            <p>Leia as regras com atenção:</p>
+            <ul>
+                <li>Você terá 10 perguntas de múltipla escolha.</li>
+                <li>Cada pergunta tem 5 segundos para responder.</li>
+                <li>Se não responder a tempo, a pergunta será pulada.</li>
+                <li>Ao final, veja seus acertos e tempo médio.</li>
+            </ul>
+            <button id="botao-iniciar-quiz" class="botao">Iniciar Quiz!</button>
+        </div>
+
+        <div id="tela-quiz" class="tela escondido">
+            <div class="info-quiz">
+                <p>Pergunta <span id="numero-questao"></span> de 10</p>
+                <div id="cronometro">5</div>
+            </div>
+            <h3 id="texto-questao"></h3>
+            <div id="container-opcoes">
+            </div>
+        </div>
+
+        <div id="tela-resultados" class="tela escondido">
+            <h2>Fim de Jogo!</h2>
+            <p id="nome-resultado"></p>
+            <p>Acertos: <span id="pontuacao-final"></span></p>
+            <p>Tempo médio: <span id="tempo-medio"></span>s</p>
+            <button id="botao-jogar-novamente" class="botao">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

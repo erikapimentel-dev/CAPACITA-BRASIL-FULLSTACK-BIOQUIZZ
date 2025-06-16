@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #edeff1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #07ab51;
+    margin-bottom: 15px;
+}
+
+p, li {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #07ab51;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.botao:hover {
+    background-color: #07ab51;
+    transform: translateY(-2px);
+}
+
+input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.escondido {
+    display: none;
+}
+
+.info-quiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#cronometro {
+    background-color: #07ab51;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-opcao {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    transition: all 0.2s;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botao-opcao:hover:not([disabled]) {
+    background-color: #e9ecef;
+}
+
+.botao-opcao:disabled {
+    cursor: not-allowed;
+}
+
+.correto {
+    background-color: #d1fae5;
+    border-color: #10b943;
+    color: #034836;
+}
+
+.incorreto {
+    background-color: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
