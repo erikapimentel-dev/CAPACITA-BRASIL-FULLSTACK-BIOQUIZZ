@@ -19,14 +19,14 @@ const tempoMedio = document.getElementById('tempo-medio');
 
 const perguntas = [
     {
-        pergunta: "Qual organela é conhecida como a 'central de energia' da célula?",
-        opcoes: ["Núcleo", "Ribossomo", "Mitocôndria", "Lisossomo"],
-        resposta: "Mitocôndria"
+        pergunta: "Dos constituintes celulares abaixo relacionados, marque qual está presente somente nos eucariontes.",
+        opcoes: ["Envoltório nuclear", "RNA", "DNA", "Membrana celular"],
+        resposta: "Envoltório nuclear"
     },
     {
-        pergunta: "Qual é o processo pelo qual as plantas produzem seu próprio alimento?",
-        opcoes: ["Respiração", "Fotossíntese", "Transpiração", "Digestão"],
-        resposta: "Fotossíntese"
+        pergunta: "Em qual local da célula podemos encontrar o DNA?",
+        opcoes: ["Complexo golgiense", "Citoplasma", "Mitocôndria", "Núcleo"],
+        resposta: "Núcleo"
     },
     {
         pergunta: "Qual é a molécula que carrega a informação genética nos seres vivos?",
@@ -34,39 +34,39 @@ const perguntas = [
         resposta: "DNA"
     },
     {
-        pergunta: "O sangue humano é classificado em quantos tipos principais?",
-        opcoes: ["2", "4", "6", "8"],
-        resposta: "4"
+        pergunta: "O que é RNA?",
+        opcoes: ["Um ácido desoxiribonucleico", "Um ácido nucleico", "Uma comida", "Um time de futebol"],
+        resposta: "Um ácido nucleico"
     },
     {
-        pergunta: "Qual destes animais é um mamífero?",
-        opcoes: ["Pinguim", "Tubarão", "Baleia", "Crocodilo"],
-        resposta: "Baleia"
+        pergunta: "Marque a que alternativa que apressenta a única base nitrogenada AUSENTE no DNA. ",
+        opcoes: ["Timina", "Uracila", "Adenina", "Citosina"],
+        resposta: "Uracila"
     },
     {
-        pergunta: "A camada mais externa da pele humana é chamada de:",
-        opcoes: ["Derme", "Hipoderme", "Epiderme", "Endoderme"],
-        resposta: "Epiderme"
+        pergunta: "Uma fita de DNA apresenta a seguinte sequência: \n TCAAGT \n Marque a alternativa que indica corretamente a sequência encontrada na fita complementar: ",
+        opcoes: ["ATAAUA", "AGTTCG"],
+        resposta: "AGTTCG"
     },
     {
-        pergunta: "Qual gás é essencial para a respiração da maioria dos seres vivos?",
-        opcoes: ["Nitrogênio", "Dióxido de Carbono", "Hidrogênio", "Oxigênio"],
-        resposta: "Oxigênio"
+        pergunta: "Quantos cromossomos temos?",
+        opcoes: ["46", " 36", "56", "47"],
+        resposta: "46"
     },
     {
-        pergunta: "Quem é considerado o 'pai da genética'?",
-        opcoes: ["Charles Darwin", "Gregor Mendel", "Louis Pasteur", "Isaac Newton"],
-        resposta: "Gregor Mendel"
-    },
-    {
-        pergunta: "Qual é o maior osso do corpo humano?",
-        opcoes: ["Tíbia", "Úmero", "Fêmur", "Crânio"],
-        resposta: "Fêmur"
+        pergunta: "Na mitose uma célula:",
+        opcoes: ["Haploide origina duas células haploides;", "Haploide origina quatro células haploides;", "Diploide origina duas células diploides;", "Diploide origina quatro células diploides."],
+        resposta: "Diploide origina duas células diploides;"
     },
     {
         pergunta: "O processo de divisão celular que produz gametas é chamado de:",
         opcoes: ["Mitose", "Meiose", "Fissão Binária", "Fragmentação"],
         resposta: "Meiose"
+    },
+    {
+        pergunta: "O Dogma Central da Biologia Molecular explica como o fluxo de informações do código genético ocorre. De acordo com esse dogma, o fluxo da informação genética ocorre no sentido:",
+        opcoes: ["RNA → DNA → Proteína", "Proteína → DNA → RNA", "DNA → RNA → Proteína"],
+        resposta: "DNA → RNA → Proteína"
     }
 ];
 
@@ -74,7 +74,7 @@ let nomeJogador = "";
 let indiceQuestaoAtual = 0;
 let pontuacao = 0;
 let cronometro;
-let tempoRestante = 5;
+let tempoRestante = 20;
 let temposPorQuestao = [];
 let tempoInicial;
 
@@ -86,7 +86,7 @@ function mostrarRegras() {
         return;
     }
     inputNomeJogador.style.borderColor = '#ccc';
-    mensagemBoasVindas.textContent = `Boas-vindas, ${nomeJogador}!`;
+    mensagemBoasVindas.textContent = `Seja muito bem-vindo(a), ${nomeJogador} ao quiz da tia Erika!`;
     telaInicial.classList.add('escondido');
     telaRegras.classList.remove('escondido');
 }
@@ -131,14 +131,14 @@ function resetarEstado() {
 }
 
 function iniciarCronometro() {
-    tempoRestante = 5;
+    tempoRestante = 20;
     cronometroDisplay.textContent = tempoRestante;
     cronometro = setInterval(() => {
         tempoRestante--;
         cronometroDisplay.textContent = tempoRestante;
         if (tempoRestante <= 0) {
             clearInterval(cronometro);
-            temposPorQuestao.push(5); 
+            temposPorQuestao.push(20);
             proximaQuestao();
         }
     }, 1000);
